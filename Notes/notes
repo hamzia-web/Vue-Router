@@ -1,0 +1,99 @@
+1. Install Vue CLI
+npm install -g @vue/cli
+
+2. Create Vue application
+vue create vue-crash-course
+
+3. Install vue-router and vuex
+vue add router: will create router folder under src
+
+4. Start the server
+npm run serve
+
+Check Vue version
+npm v vue
+
+Components: list of files
+Angular: 3 files(3 files- app.component.html, app.component.css, app.component.ts)
+React: 2 files(App.jsx, App.css)
+Vue: 3 files(App.vue)
+
+App.vue: contains 3 parts -> html, js, css
+   <template>
+      html code goes here
+   </template>
+
+   <script>
+     javascript code goes here
+   </script>
+
+   <style>
+    css code goes here
+   </style>
+
+
+Control Flow:
+-------------
+http://localhost:8080/ -> homepage(index.html)
+
+<div id="app">
+  <App/>  // App.vue code is injected here
+</div>
+
+App.vue
+<template>
+  <img alt="Vue logo" src="./assets/logo.png">
+  <HelloWorld msg="Welcome to Your Vue.js App"/>
+</template>
+
+<script>
+import HelloWorld from './components/HelloWorld.vue'
+
+export default {
+  name: 'App',
+  components: {
+    HelloWorld
+  }
+}
+</script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
+
+Install Bootstrap and font awesome
+---------------------------------
+1. npm i bootstrap @fortawesome/fontawesome-free
+
+2. Add Font awesome CDN link into index.html for getting all icons
+Check the font-awesome version in package.json and copy the same version CDN link. ("@fortawesome/fontawesome-free": "^6.0.0")
+Link: https://cdnjs.com/libraries/font-awesome
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+3. Configure bootstrap and fortawesome in main.js
+
+//Configure font-awesome and bootstrap
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/js/bootstrap.bundle'
+import '@fortawesome/fontawesome-free/css/all.css'
+import 'mdbootstrap/css/mdb.css'
+
+NOTE: Since Bootstrap is developed on top of css and mdbootsrtap is developed on tp of bootstrap
+Instead of installing bootstrap, we can simply install mdbootstrap, which gives all files
+
+
+- name, data, props, methods are predefined properties of vus js component. Order is not important
+- Empty parameters methods can be called with or without parenthesis
+  e.g. @click="increment" or @click="increment()"
+
+
+
+
+
